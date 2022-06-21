@@ -1,1 +1,3 @@
 Commit for YubaWater Git files
+Updated Image files
+Updated Water Rights HTML files
