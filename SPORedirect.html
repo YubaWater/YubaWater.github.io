@@ -5,13 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redirecting...</title>
     <script>
-      function openInNewTab(url) { window.open(url, '_blank').focus(); }
-      //openInNewTab("https://yubawater.sharepoint.com");
+      //function openInNewTab(url) { window.open(url, '_blank').focus(); }
+      function openInNewTab(href) {
+        Object.assign(document.createElement('a'), {
+          target: '_blank',
+          rel: 'noopener noreferrer',
+          href: href,
+        }).click();
+      }
+      openInNewTab("https://yubawater.sharepoint.com");
       //window.location.href = "https://yubawater.sharepoint.com";
     </script>
   </head>
   <body>
-    Please click here to redirect <a onclick="openInNewTab('https://yubawater.sharepoint.com');">https://yubawater.sharepoint.com</a>
+    Please click here to redirect <a onclick="window.open('https://yubawater.sharepoint.com', '_blank');">https://yubawater.sharepoint.com</a>
     <!--Redirecting to <a href="https://yubawater.sharepoint.com">https://yubawater.sharepoint.com</a>-->
   </body>
 </html>
