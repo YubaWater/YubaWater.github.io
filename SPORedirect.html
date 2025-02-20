@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <script>
+      //function openInNewTab(url) { window.open(url, '_blank').focus(); }
+      function openInNewTab(href) {
+        Object.assign(document.createElement('a'), {
+          target: '_system',
+          rel: 'noopener noreferrer',
+          href: href,
+        }).click();
+      }
+      openInNewTab("https://yubawater.sharepoint.com");
+      //window.location.href = "https://yubawater.sharepoint.com";
+    </script>
+  </head>
+  <body>
+    <p style="color: orangered;">
+      You should have been automatically redirected to The Pipeline SharePoint Online home page in your browser.<br>
+      If you have not, please click <a href="https://yubawater.sharepoint.com" target="_system">here</a> to be redirected.<br>
+    </p>
+  </body>
+</html>
