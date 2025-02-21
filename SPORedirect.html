@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redirecting...</title>
     <script>
-      var strUserAgent = navigator.userAgent || navigator.vendor || window.opera;;
-      var divUA = document.createElement('div');
-      divUA.innerHTML = "<p>" + strUserAgent + "</p>";
       //function openURLNewAElement(href) {
       //  Object.assign(document.createElement('a'), {
       //    target: '_system',
@@ -25,5 +22,11 @@
       You should have been automatically redirected to The Pipeline SharePoint Online home page in your browser.<br>
       If you have not, please click <a href="#" onclick="openURLNewWindow('https://yubawater.sharepoint.com'); return false;" style="color: grey;">here</a> to be redirected.<br>
     </p>
+    <div id="divUA" style="color: cyan;"></div>
+    <script>
+      var strUserAgent = navigator.userAgent || navigator.vendor || window.opera;;
+      var divUAElement = document.getElementById("divUA");
+      divUAElement.textContent = strUserAgent;
+    </script>
   </body>
 </html>
