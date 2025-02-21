@@ -24,9 +24,16 @@
     </p>
     <div id="divUA" style="color: cyan;"></div>
     <script>
-      var strUserAgent = navigator.userAgent || navigator.vendor || window.opera;;
+      var strUserAgent = navigator.userAgent || navigator.vendor || window.opera;
       var divUAElement = document.getElementById("divUA");
       divUAElement.textContent = strUserAgent;
+      if (/Android/i.test(strUserAgent) || /android/i.test(strUserAgent)) {
+        divUAElement.textContent = "MOBILE! " + strUserAgent;
+        document.write("<a target=\"_blank\" href=\"https://yubawater.sharepoint.com\" download id=\"open-browser-url\">Please wait. Proceeding to default browser.</a>");
+        window.stop();
+        let input = document.getElementById('open-browser-url');
+        if (input) { input.click(); }
+      }
     </script>
   </body>
 </html>
