@@ -26,14 +26,21 @@
     <script>
       var strUserAgent = navigator.userAgent || navigator.vendor || window.opera;
       var divUAElement = document.getElementById("divUA");
-      divUAElement.textContent = strUserAgent;
+      divUAElement.textContent = "You are using a computer: " + strUserAgent;
       if (/Android/i.test(strUserAgent) || /android/i.test(strUserAgent)) {
-        divUAElement.textContent = "MOBILE! " + strUserAgent;
+        divUAElement.textContent = "You are using Android: " + strUserAgent;
         document.write("<a target=\"_blank\" href=\"https://yubawater.sharepoint.com\" download id=\"open-browser-url\">Please wait. Proceeding to default browser.</a>");
         window.stop();
         let input = document.getElementById('open-browser-url');
         if (input) { input.click(); }
-      }
+      } // Mozilla/5.0 (Linux; Android 14; SM-S921U Build/UP1A.231005.007; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/132.0.6834.163 Mobile Safari/537.36 TeamsMobile-Android
+      else if (/iPad|iPhone/i.test(strUserAgent) || /ipad|iphone/i.test(strUserAgent)) {
+        divUAElement.textContent = "You are using iOS: " + strUserAgent;
+        document.write("<a target=\"_blank\" href=\"https://yubawater.sharepoint.com\" download id=\"open-browser-url\">Please wait. Proceeding to default browser.</a>");
+        window.stop();
+        let input = document.getElementById('open-browser-url');
+        if (input) { input.click(); }
+      } //Mozilla/5.0 (iPhone; CPU iPhone OS 18_1_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1.1 Mobile/15E148 Safari/604.1
     </script>
   </body>
 </html>
