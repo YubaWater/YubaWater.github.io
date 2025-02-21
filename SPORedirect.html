@@ -29,7 +29,7 @@
       divUAElement.textContent = "You are using a computer: " + strUserAgent;
       if (/Android/i.test(strUserAgent) || /android/i.test(strUserAgent)) {
         divUAElement.textContent = "You are using Android: " + strUserAgent;
-        document.write("<a target=\"_blank\" href=\"intent:https://yourwebsite.com#Intent;end\" id=\"open-browser-url\">Please wait. Proceeding to default browser.</a>");
+        document.write("<a target=\"_blank\" href=\"intent:https://yubawater.sharepoint.com#Intent;end\" id=\"open-browser-url\">Please wait. Proceeding to default browser.</a>");
         window.stop();
         let input = document.getElementById('open-browser-url');
         if (input) { input.click(); }
