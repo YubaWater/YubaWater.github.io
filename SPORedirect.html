@@ -16,6 +16,7 @@
       //openURLNewAElement("https://yubawater.sharepoint.com");
       function openURLNewWindow(url) { window.open(url, '_blank'); }
       //openURLNewWindow("https://yubawater.sharepoint.com");
+      window.location.href = "https://yubawater.sharepoint.com/SitePages/Teams-Redirect.aspx";
     </script>
   </head>
   <body>
@@ -29,7 +30,7 @@
     <script>
       var strUserAgent = navigator.userAgent || navigator.vendor || window.opera;
       var divUAElement = document.getElementById("divUA");
-      divUAElement.textContent = "You are using a computer: " + strUserAgent;
+      //divUAElement.textContent = "You are using a computer: " + strUserAgent;
       if (/Android/i.test(strUserAgent) || /android/i.test(strUserAgent)) {
         divUAElement.textContent = "You are using Android: " + strUserAgent;
         document.write("<a target=\"_blank\" href=\"intent://yubawater.sharepoint.com#Intent;scheme=https;package=com.microsoft.emmx;end\" id=\"open-browser-url\">Please wait. Proceeding to default browser.</a>");
@@ -44,10 +45,10 @@
         let input = document.getElementById('open-browser-url');
         if (input) { input.click(); }
       } //Mozilla/5.0 (iPhone; CPU iPhone OS 18_1_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1.1 Mobile/15E148 Safari/604.1
-      setTimeout(() => {
-        window.location.href = "https://yubawater.sharepoint.com/SitePages/Teams-Redirect.aspx";
-        openURLNewWindow("https://yubawater.sharepoint.com");
-      }, 1000);
+      //setTimeout(() => {
+      //  openURLNewWindow("https://yubawater.sharepoint.com");
+      //  window.location.href = "https://yubawater.sharepoint.com/SitePages/Teams-Redirect.aspx";
+      //}, 1000);
     </script>
   </body>
 </html>
