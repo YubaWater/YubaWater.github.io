@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirecting...</title>
+    <meta http-equiv="refresh" content="0; url=https://yubawater.sharepoint.com/SitePages/Teams-Redirect.aspx">
+    <title>The Pipeline Teams Redirection Page</title>
     <script>
       //function openURLNewAElement(href) {
       //  Object.assign(document.createElement('a'), {
@@ -13,15 +14,17 @@
       //  }).click();
       //}
       //openURLNewAElement("https://yubawater.sharepoint.com");
-      function openURLNewWindow(url) { window.open(url, '_system'); }
+      function openURLNewWindow(url) { window.open(url, '_blank'); }
       //openURLNewWindow("https://yubawater.sharepoint.com");
     </script>
   </head>
   <body>
-    <p style="color: orangered;">
-      You should have been automatically redirected to The Pipeline SharePoint Online home page in your browser.<br>
-      If you have not, please click <a href="#" onclick="openURLNewWindow('https://yubawater.sharepoint.com'); return false;" style="color: grey;">here</a> to be redirected.<br>
-    </p>
+    <h1>The Pipeline Teams Redirection Page</h1>
+    <h2>
+      Due to ongoing compatibility issues with Microsoft Teams and SharePoint, the Pipeline is no longer accessible through Teams.<br />
+      Please click <a href='https://yubawater.sharepoint.com' target="_blank" rel="noopener noreferrer">here</a> to explore the Pipeline in a web browser instead. Thank you!<br />
+      -The Pipeline Admin Team
+    </h2>
     <div id="divUA" style="color: cyan;"></div>
     <script>
       var strUserAgent = navigator.userAgent || navigator.vendor || window.opera;
@@ -42,7 +45,7 @@
         if (input) { input.click(); }
       } //Mozilla/5.0 (iPhone; CPU iPhone OS 18_1_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1.1 Mobile/15E148 Safari/604.1
       setTimeout(() => {
-        window.location.href = "https://yubawater.sharepoint.com/SitePages/Teams-Redirect.aspx';
+        window.location.href = "https://yubawater.sharepoint.com/SitePages/Teams-Redirect.aspx";
         openURLNewWindow("https://yubawater.sharepoint.com");
       }, 1000);
     </script>
